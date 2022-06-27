@@ -8,7 +8,7 @@ resource "azurerm_template_deployment" "infnext-arm" {
   resource_group_name = azurerm_resource_group.infnext-GR.name
   deployment_mode     = "Complete"
   depends_on = [ azurerm_resource_group.infnext-GR ]
-  template_body = file("${path.module}/appsectemplate.json")
+  template_body = file("${path.module}/mainTemplate.json")
   # these key-value pairs are passed into the ARM Template's `parameters` block
   parameters = {
     "location" = azurerm_resource_group.infnext-GR.location
