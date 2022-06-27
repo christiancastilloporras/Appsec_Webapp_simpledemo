@@ -30,5 +30,6 @@ resource "azurerm_template_deployment" "infnext-arm" {
     "inboundSources" = "0.0.0.0/0"
     "installationType" = "waap"
     "waapAgentToken" = "${var.waaptoken}"
+    "_artifactsLocation" = "https://raw.githubusercontent.com/CheckPointSW/CloudGuardIaaS/master/azure/templates/"
   }
 }
