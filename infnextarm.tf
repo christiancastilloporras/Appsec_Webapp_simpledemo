@@ -12,7 +12,6 @@ resource "azurerm_template_deployment" "infnext-arm" {
   # these key-value pairs are passed into the ARM Template's `parameters` block
   parameters = {
     "location" = azurerm_resource_group.infnext-GR.location
-    ##"cloudGuardVersion" = "R80.40 - Bring Your Own License"
     "adminPassword" = "${var.admin_password}"
     "authenticationType" = "password"
     "vmName" = "InfNextGW"
